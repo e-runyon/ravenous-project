@@ -22,4 +22,25 @@ function App() {
   );
 }
 
-export default App;
+function Business() {
+  return (
+    <div>
+      <img />
+      <h3>name</h3>
+      <div>
+        <ul>
+          <li>address</li>
+          <li>city</li>
+          <li>state + zipcode</li>
+        </ul>
+        <ul>
+          <li>category</li>
+          <li>rating</li>
+          <li>reviewcount</li>
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+export {App, Business};
