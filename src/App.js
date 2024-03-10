@@ -1,22 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
 
+//Stock food picture for alignment purposes
+import burger from './burger.png'
+
+//Business Information Storage
+const biz = {
+  food: burger,
+  name: "Burger Fiend",
+  address: "1123 Pickle Ave",
+  city: "Chedderfield",
+  state: "WI",
+  zipcode: 40604,
+  category: "AMERICAN",
+  rating: 4.5,
+  reviews: 333,
+}
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <title>Ravenous: Local Food Finder</title>
+        <h1>ravenous</h1>
       </header>
     </div>
   );
@@ -24,19 +30,19 @@ function App() {
 
 function Business() {
   return (
-    <div>
-      <img />
-      <h3>name</h3>
-      <div>
-        <ul>
-          <li>address</li>
-          <li>city</li>
-          <li>state + zipcode</li>
+    <div className="Business-tile">
+      <img src={biz.food} alt='' className='Food-tile'/>
+      <h2>{biz.name}</h2>
+      <div className="Details">
+        <ul className='Location'>
+          <li>{biz.address}</li>
+          <li>{biz.city}</li>
+          <li>{biz.state} {biz.zipcode}</li>
         </ul>
-        <ul>
-          <li>category</li>
-          <li>rating</li>
-          <li>reviewcount</li>
+        <ul className='Rated'>
+          <li><strong>{biz.category}</strong></li>
+          <li><strong>{biz.rating} stars</strong></li>
+          <li>{biz.reviews} Reviews</li>
         </ul>
       </div>
     </div>
