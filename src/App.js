@@ -17,6 +17,8 @@ const biz = {
   reviews: 333,
 }
 
+
+
 function App() {
   return (
     <div className="App">
@@ -28,6 +30,7 @@ function App() {
   );
 }
 
+//React Component
 function Business() {
   return (
     <div className="Business-tile">
@@ -49,4 +52,9 @@ function Business() {
   )
 }
 
-export {App, Business};
+function BusinessList() {
+  const bizArr = new Array(6);
+  
+}
+
+export {App, Business, BusinessList};
