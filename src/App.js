@@ -7,7 +7,7 @@ import burger from './burger.png'
 //Business Information Storage
 const biz = {
   food: burger,
-  name: "Burger Fiend",
+  name: "Burger Friend",
   address: "1123 Pickle Ave",
   city: "Chedderfield",
   state: "WI",
@@ -53,7 +53,20 @@ function Business() {
 }
 
 function BusinessList() {
-  const bizArr = new Array(6);
+  const arr = new Array(6);
+  arr.fill(Business());
+  return (
+    <div className="BizDiv">
+      <ul className="BizList">
+        <li>{arr[0]}</li>
+        <li>{arr[1]}</li>
+        <li>{arr[2]}</li>
+        <li>{arr[3]}</li>
+        <li>{arr[4]}</li>
+        <li>{arr[5]}</li>
+      </ul>
+    </div>
+  )
   
 }
 

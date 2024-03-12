@@ -21,7 +21,7 @@ h2 {
 }
 
 .App-header {
-  background-color: orange;
+  background-color: rgb(212, 164, 75);
   /* border: 1px solid green; */
   padding: 0;
   height: 10%;
@@ -57,7 +57,7 @@ h2 {
   }
 }
 
-ul {
+.Details ul {
   margin: 0;
   padding: 0 5px;
   /* border: 1px solid; */
@@ -81,4 +81,10 @@ ul {
 
 ul li {
   list-style: none;
+}
+
+.BizDiv {
+  background-color: aqua;
+  display: flex; 
+  float: inline-start;
 }
