@@ -7,7 +7,7 @@ import burger from './burger.png'
 //Business Information Storage
 const biz = {
   food: burger,
-  name: "Burger Friend",
+  name: "Burger Fiend",
   address: "1123 Pickle Ave",
   city: "Chedderfield",
   state: "WI",
@@ -21,12 +21,10 @@ const biz = {
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <header className="App">
         <title>Ravenous: Local Food Finder</title>
         <h1>ravenous</h1>
-      </header>
-    </div>
+    </header>
   );
 }
 
@@ -57,17 +55,44 @@ function BusinessList() {
   arr.fill(Business());
   return (
     <div className="BizDiv">
-      <ul className="BizList">
-        <li>{arr[0]}</li>
-        <li>{arr[1]}</li>
-        <li>{arr[2]}</li>
-        <li>{arr[3]}</li>
-        <li>{arr[4]}</li>
-        <li>{arr[5]}</li>
-      </ul>
+      <div className="box" id="box1">{arr[0]}</div>
+      <div className="box" id="box2">{arr[1]}</div>
+      <div className="box" id="box3">{arr[2]}</div>
+      <div className="box" id="box4">{arr[3]}</div>
+      <div className="box" id="box5">{arr[4]}</div>
+      <div className="box" id="box6">{arr[5]}</div>
     </div>
   )
   
 }
 
-export {App, Business, BusinessList};
+function SearchBar() {
+  return (
+    <div className='Search'>
+      <form action=''>
+        <div className="sortby">
+          <label>
+            Best Match
+            <input type='radio' id="best-match" value="" />
+          </label>
+          <label>
+            Highest Rated
+            <input type='radio' id="highest-rated" value="" />
+          </label>
+          <label>
+            Most Reviewed
+            <input type='radio' id="most-reviewed" value="" />
+          </label>
+        </div>
+        <div className="textfields">
+            <input type='text' id="what" defaultValue="Search Businesses" />
+            <input type='text' id="where" defaultValue="Where?" />
+        </div>
+        <input type="submit" id="submit" value="Let's Go" />
+      </form>
+    </div>
+  )
+}
+
+
+export {App, Business, BusinessList, SearchBar};
