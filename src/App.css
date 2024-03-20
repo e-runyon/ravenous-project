@@ -129,13 +129,37 @@ label {
 
 .sortby {
   display: flex;
+  /* background-color: gray; */
+  font-size: 110%;
+  font-weight: bold;
   width: 60%;
   justify-content: space-around;
-  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+}
+
+.sortby > div {
+  margin: auto 0;
+  width: 100%;
+  border-bottom: 3px solid white;
+  padding: 10px 30px;
+  color: white;
 }
 
 .textfields {
   display: flex;
   justify-content: space-evenly;
   width:100%;
+}
+
+#sort {
+  color: rgb(220, 136, 68);
+  border-bottom: 3px solid rgb(220, 136, 68);
+  text-shadow: 
+    2px 2px 2px #000,
+    -2px 2px 2px #000,
+     2px -2px 2px #000,
+    -2px -2px 2px #000;
+    
+  
+  
 }

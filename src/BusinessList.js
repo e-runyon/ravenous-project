@@ -7,7 +7,7 @@ function BusinessList(props){
     return (
         <div className='BizDiv'>
             {list.map((business) => (
-                <Business biz={business} />
+                <Business biz={business} key={business}/>
             ))
             }
         </div>
